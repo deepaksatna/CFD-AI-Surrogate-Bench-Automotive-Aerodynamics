@@ -1,7 +1,7 @@
 # Beyond the Model — Aero Neural-CFD Surrogate Bake-Off
 
 **Pre-registered methodology. Committed before any model is trained.**
-Date: 2026-06-06 · Hardware: NVIDIA Brev (B200 / H100 class) · Domain: HPC + AI + Automotive
+Date: 2026-06-06 · Hardware: NVIDIA Brev (high-end GPU class) · Domain: HPC + AI + Automotive
 
 > **The question:** every automaker spends millions of GPU-hours on CFD to predict a car's
 > drag. Neural surrogates promise the same number in milliseconds. We run the leading
@@ -54,7 +54,7 @@ cost AND run **3 cases ourselves on the Brev box** to anchor a real wall-time on
 
 ## 5. Hardware & protocol
 
-- **Brev shape:** 1× B200 192GB (or 1× H100 80GB) for MVP; multi-GPU noted for full-field DoMINO training. Big VRAM is justified — mesh GNN/operator training on 0.5M-point geometries is memory-bound.
+- **Brev shape:** 1× high-end GPU (≥80 GB) for MVP; multi-GPU noted for full-field DoMINO training. Big VRAM is justified — mesh GNN/operator training on 0.5M-point geometries is memory-bound.
 - Fixed seeds; identical train/val/test; same input resolution within a family; matplotlib+numpy plots only; run-recorder JSON schema shared with the other issues (enables a future meta-issue).
 - Pre-registered: this file is committed before training. Corrections welcome as repo issues.
 

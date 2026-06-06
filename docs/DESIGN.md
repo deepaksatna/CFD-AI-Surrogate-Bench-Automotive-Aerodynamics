@@ -45,7 +45,7 @@ fewer simulations** than random sampling. *This is the killer CFD×AI story* —
 surrogate from a gadget into a simulation-budget optimizer.
 
 ### 4. Energy & end-to-end cost on the same hardware — *the HPC clincher*
-On the B200: measure surrogate inference **Joules/design** (via `nvidia-smi`/NVML power
+On the GPU: measure surrogate inference **Joules/design** (via `nvidia-smi`/NVML power
 sampling) and a real OpenFOAM solve's GPU-hours + kWh on the *same node*. Project a full
 **1,000-design study**: CFD = N GPU-days and M kWh; surrogate-screened = seconds and grams of
 CO₂. Report training MFU / GPU-utilization too. *Headline: "A 1,000-car design sweep: 14 GPU-days

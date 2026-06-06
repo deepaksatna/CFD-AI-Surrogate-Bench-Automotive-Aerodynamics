@@ -180,7 +180,7 @@
     "loss": "smooth_l1"
   },
   "hardware": {
-    "gpu": "NVIDIA B200",
+    "gpu": "high-end NVIDIA GPU",
     "python": "3.12.3",
     "torch": "2.12.0+cu130"
   }

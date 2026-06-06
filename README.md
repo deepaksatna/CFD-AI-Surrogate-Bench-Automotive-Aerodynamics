@@ -6,7 +6,7 @@
   <img alt="CFD" src="https://img.shields.io/badge/CFD-Aerodynamics-1f77b4?style=for-the-badge">
   <img alt="HPC" src="https://img.shields.io/badge/HPC-160M_cell_LES-ff7f0e?style=for-the-badge">
   <img alt="AI" src="https://img.shields.io/badge/AI-Neural_Surrogates-2ca02c?style=for-the-badge&logo=pytorch&logoColor=white">
-  <img alt="NVIDIA" src="https://img.shields.io/badge/NVIDIA-B200_%7C_PhysicsNeMo-76B900?style=for-the-badge&logo=nvidia&logoColor=white">
+  <img alt="NVIDIA" src="https://img.shields.io/badge/NVIDIA-GPU_%7C_PhysicsNeMo-76B900?style=for-the-badge&logo=nvidia&logoColor=white">
 </p>
 <p align="center">
   <img alt="Dataset" src="https://img.shields.io/badge/Dataset-DrivAerML_(HRLES)-9467bd">
@@ -98,7 +98,7 @@ scalar directly; use the field for visualization/diagnostics, not force recovery
 One DrivAerML HRLES solve ≈ **61,440 CPU core‑hours** (160 M cells, 1,536 cores × ~40 h); the full
 500‑case dataset ≈ **30.7 M core‑hours**. Surrogate inference is **0.65 ms / 0.21 J**. Once trained,
 each new shape is screened **~10⁸× cheaper in compute** (amortized). Notably, the surrogate training
-**never exceeded ~0% GPU utilisation** on a B200 — the bottleneck is the 660 MB‑per‑car mesh I/O,
+**never exceeded ~0% GPU utilisation** on a high-end GPU — the bottleneck is the 660 MB‑per‑car mesh I/O,
 **not** GPU compute, so a modest GPU + parallel preprocessing is the right hardware here.
 
 ## 4. How it works

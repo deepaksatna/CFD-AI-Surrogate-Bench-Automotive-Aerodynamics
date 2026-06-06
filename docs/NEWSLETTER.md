@@ -97,7 +97,7 @@ visualization, not force recovery.** A negative result worth more than a fifth "
 One HRLES solve ≈ **61,440 core‑hours**; the full 500‑case dataset ≈ **30.7 M core‑hours**.
 Inference is **0.65 ms / 0.21 J** — once trained, each new shape is screened **~10⁸× cheaper**
 (amortized). And a surprise for the infra crowd: the surrogate training **never exceeded ~0% GPU
-util** on a B200 — it's **data‑pipeline‑bound** (660 MB meshes), not GPU‑bound. *You don't need a
+util** on a high-end GPU — it's **data‑pipeline‑bound** (660 MB meshes), not GPU‑bound. *You don't need a
 big GPU for this; you need a faster data path.*
 
 ---
@@ -137,7 +137,7 @@ numbers, all welcome. The repo is the conversation.
 DrivAerML (CC‑BY‑SA): 500 hybrid‑RANS‑LES DrivAer cars, geometry as 5,000‑point surface clouds
 (unit‑sphere normalized), Cd from `force_mom_*.csv`. 80/10/10 split by run id; drag in counts.
 PointNet & RegDGCNN at matched settings (Adam + cosine, SmoothL1 on standardized Cd, 150 epochs);
-latency + **NVML energy** on one NVIDIA B200. Scaling law = same model, train fractions 0.1–1.0.
+latency + **NVML energy** on one high-end NVIDIA GPU. Scaling law = same model, train fractions 0.1–1.0.
 Novelty = voxel‑occupancy descriptor, distance to nearest training shape. Pre‑registered plan
 committed before training; raw run‑records + plots in the repo.
 
