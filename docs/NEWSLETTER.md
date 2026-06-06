@@ -1,3 +1,5 @@
+![CFD-AI Surrogate Bench — Automotive Aerodynamics](../results/newsletter_banner.png)
+
 # Beyond the Model — Issue N
 ## We replaced a wind tunnel with a neural net. The cheap model won — and we found exactly where it lies.
 

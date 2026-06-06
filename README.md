@@ -1,5 +1,7 @@
 # 🏎️💨 CFD‑AI Surrogate Bench — Automotive Aerodynamics
 
+![CFD-AI Surrogate Bench — Automotive Aerodynamics](results/newsletter_banner.png)
+
 <p align="center">
   <img alt="CFD" src="https://img.shields.io/badge/CFD-Aerodynamics-1f77b4?style=for-the-badge">
   <img alt="HPC" src="https://img.shields.io/badge/HPC-160M_cell_LES-ff7f0e?style=for-the-badge">
