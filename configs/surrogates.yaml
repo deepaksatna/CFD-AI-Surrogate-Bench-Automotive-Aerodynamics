@@ -1,0 +1,31 @@
+# Surrogate model configs. Phase 1 ships regdgcnn (scalar Cd). Others are Phase 2+.
+# RegDGCNN hyperparameters here are sensible DGCNN-regression defaults to be reconciled
+# against the official RegDGCNN_SurfaceFields code on the box (README gave no numbers).
+
+regdgcnn:
+  k: 20                       # kNN graph neighbors for EdgeConv
+  edge_dims: [64, 64, 128, 256]
+  emb_dim: 1024               # post-concat embedding conv width
+  head_dims: [512, 256]       # MLP regression head -> 1 (Cd)
+  dropout: 0.3
+  optimizer: adam
+  lr: 0.001
+  weight_decay: 0.0001
+  scheduler: cosine
+  epochs: 150
+  batch_size: 32
+  loss: smooth_l1             # robust to Cd outliers
+
+pointnet:                     # Phase 1 cheap reference (the floor)
+  feat_dims: [64, 64, 128, 256, 1024]
+  head_dims: [512, 256]
+  dropout: 0.3
+  optimizer: adam
+  lr: 0.001
+  weight_decay: 0.0001
+  scheduler: cosine
+  epochs: 120
+  batch_size: 48
+  loss: smooth_l1
+
+# meshgraphnet / domino -> Phase 2 (surface-pressure fields), configured later

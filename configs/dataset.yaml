@@ -1,0 +1,15 @@
+# DrivAerNet++ data config (Phase 1: scalar Cd from point clouds)
+cd_csv_url: "https://www.dropbox.com/scl/fi/2rtchqnpmzy90uwa9wwny/DrivAerNetPlusPlus_Cd_8k_Updated.csv?rlkey=vjnjurtxfuqr40zqgupnks8sn&st=6dx1mfct&dl=1"
+splits_base_url: "https://raw.githubusercontent.com/Mohamedelrefaie/DrivAerNet/main/train_val_test_splits"
+split_files:        # filename on GitHub -> split name (auto-probed; edit if names differ)
+  train_design_ids.txt: train
+  val_design_ids.txt: val
+  test_design_ids.txt: test
+
+# Geometry: the 3D-Meshes subset (Harvard Dataverse, Globus). Stage STLs locally, point here.
+# Each file expected as <DesignID>.stl  (e.g. DrivAer_F_D_WM_WW_0001.stl)
+mesh_dir: "data/meshes"          # where you put the downloaded STLs
+cache_dir: "data/cache"          # sampled point clouds cached as .npy here
+
+n_points: 5000                   # points sampled per car surface (RegDGCNN baseline-ish)
+normalize: unit_sphere           # center + scale to unit sphere (scale-invariant geometry)

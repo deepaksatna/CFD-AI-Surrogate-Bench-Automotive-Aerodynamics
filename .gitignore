@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+.DS_Store
+# large data — downloaded on demand, not committed
+data/cache/
+data/meshes/
+data/fields/
+data/fields_raw/
+data/drivaerml_raw/
+data/*.csv
+data/manifest.json
+*.npy
+*.npz
+*.vtp
+*.vtu
+*.stl
+results/_superseded/
